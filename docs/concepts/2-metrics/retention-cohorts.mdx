@@ -1,0 +1,58 @@
+---
+title: Retention & cohorts
+sidebar_label: 🔁 Retention & cohorts
+slug: /concepts/retention-cohorts
+emoji: 🔁
+sidebar_position: 3
+---
+
+# 🔁 Retention & cohort analysis
+
+> **In one line:** retention is the % of users who come back over time. **Cohorts** group users by when they started, so you can compare them fairly.
+
+```mermaid
+xychart-beta
+  title "Retention curves: what good looks like"
+  x-axis "Weeks since sign-up" [0, 1, 2, 3, 4, 6, 8, 12]
+  y-axis "% still active" 0 --> 100
+  line "Healthy (flattens)" [100, 55, 45, 41, 39, 38, 37, 37]
+  line "Leaky (goes to zero)" [100, 40, 25, 15, 9, 5, 2, 1]
+```
+
+**The shape matters more than the number.** A curve that **flattens** means you've found users who get lasting value (a sign of product-market fit). A curve that keeps declining to zero means a leaky bucket.
+
+## Cohort table: read it diagonally and down
+
+| Signup month | M0 | M1 | M2 | M3 |
+|---|---|---|---|---|
+| Jan | 100% | 42% | 35% | 33% |
+| Feb | 100% | 45% | 38% | 36% |
+| Mar | 100% | 51% | 44% | — |
+| Apr | 100% | 55% | — | — |
+
+Reading **down** a column shows whether newer cohorts retain better (here they do, so the product is improving).
+
+## Types of retention
+
+| Type | Definition | Best for |
+|---|---|---|
+| N-day | active exactly on day N | daily-habit apps |
+| Unbounded (rolling) | active on day N **or later** | infrequent products such as travel |
+| Bracket | active in week/month N | weekly products |
+
+## Retention drivers
+
+```mermaid
+flowchart LR
+  A["✨ Activation<br/>reach the aha moment fast"] --> H["🔁 Habit<br/>trigger → action → reward"]
+  H --> V["💎 Ongoing value<br/>new content, network, data"]
+  V --> S["🔒 Switching costs<br/>history, connections"]
+```
+
+:::tip Choose the right frequency
+Don't judge a tax app by its DAU. Match the retention window to the product's **natural usage frequency**.
+:::
+
+<Quiz question="A cohort curve that flattens at 30% after week 4 suggests…" options={["The product is failing", "A core group gets lasting value: a sign of PMF", "Seasonality", "A tracking bug"]} answer={1} explain="Flattening means a stable retained base. The next job is to raise where it flattens." />
+
+<UsedBy concept="retention-cohorts" />

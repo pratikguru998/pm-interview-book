@@ -1,0 +1,51 @@
+---
+title: AI / ML product framework
+sidebar_label: 🤖 AI product sense
+sidebar_position: 10
+emoji: 🤖
+---
+
+# 🤖 AI / ML product framework
+
+AI product questions add three twists to normal product sense: **is AI even the right tool, how good does the model need to be, and what happens when it's wrong?**
+
+<FrameworkSteps steps={[
+  {letter: '1', title: 'Problem first', desc: 'What is the user problem? Would a non-AI solution work just as well?'},
+  {letter: '2', title: 'Why AI', desc: 'Is the task about patterns, language, personalization or scale that rules can’t handle?'},
+  {letter: '3', title: 'Data', desc: 'What data do you need? Do you have it? What about labels, privacy and the feedback loop?'},
+  {letter: '4', title: 'Quality bar', desc: 'Define "good enough": precision vs recall, latency, cost per call.'},
+  {letter: '5', title: 'UX for errors', desc: 'How do users understand, correct and trust the output? Keep a human in the loop where needed.'},
+  {letter: '6', title: 'Evaluate', desc: 'Offline evals, then online A/B tests, then ongoing monitoring for drift.'},
+  {letter: '7', title: 'Risks', desc: 'Bias, hallucination, safety, abuse, regulation and cost blowups.'},
+]} />
+
+```mermaid
+flowchart LR
+  U["👤 User problem"] --> Q{"Need AI?"}
+  Q -- "No: rules work" --> R["Simple rules ✅"]
+  Q -- Yes --> D["📦 Data + labels"]
+  D --> M["🧠 Model / LLM"]
+  M --> E["🧪 Evals<br/>offline → online"]
+  E --> X["🖥️ UX with error handling<br/>undo, confidence, human review"]
+  X --> F["🔁 Feedback loop"]
+  F --> D
+```
+
+## Cost of mistakes decides your metric
+
+```mermaid
+quadrantChart
+  title Which error hurts more?
+  x-axis False positive cheap --> False positive costly
+  y-axis False negative cheap --> False negative costly
+  quadrant-1 Need both, add human review
+  quadrant-2 Optimize recall
+  quadrant-3 Ship fast, iterate
+  quadrant-4 Optimize precision
+  "Cancer screening": [0.35, 0.9]
+  "Spam filter": [0.75, 0.3]
+  "Song recs": [0.15, 0.15]
+  "Fraud blocking": [0.8, 0.85]
+```
+
+<UsedBy framework="ai-product" />

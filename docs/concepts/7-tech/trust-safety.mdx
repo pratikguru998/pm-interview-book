@@ -1,0 +1,50 @@
+---
+title: Trust, safety & privacy
+sidebar_label: 🔐 Trust, safety & privacy
+slug: /concepts/trust-safety
+emoji: 🔐
+sidebar_position: 6
+---
+
+# 🔐 Trust, safety & privacy
+
+> **In one line:** users only engage when they feel safe. Trust is hard to win and easy to lose, so it must be designed in from the start.
+
+```mermaid
+flowchart TD
+  T(("🔐 Trust")) --> S["🛡️ Safety<br/>harassment, fraud, harmful content"]
+  T --> P["🔏 Privacy<br/>data minimization, consent, control"]
+  T --> R["⭐ Reliability<br/>does what it promises"]
+  T --> X["🔍 Transparency<br/>why am I seeing this? how is data used?"]
+```
+
+## Trust & safety toolkit
+
+| Layer | Examples |
+|---|---|
+| **Prevent** | Identity verification, rate limits, friction for new accounts |
+| **Detect** | ML classifiers, user reports, anomaly detection |
+| **Respond** | Remove content, suspend accounts, appeals process |
+| **Communicate** | Community guidelines, transparency reports |
+
+## Two-sided trust (marketplaces)
+
+```mermaid
+flowchart LR
+  G["🙋 Guest"] -- "reviews, ID verification" --> H["🏠 Host"]
+  H -- "reviews, verified listings" --> G
+  P(("Platform")) -. "secure payments, insurance, 24/7 support" .-> G & H
+```
+
+## Privacy principles
+- **Data minimization**: collect only what you need.
+- **Consent & control**: clear opt-in, easy deletion and export (GDPR, CCPA).
+- **Privacy by design**: use on-device processing and anonymization where possible.
+
+:::tip Metrics
+Prevalence of harmful content (views of violating content per 10k views), time to action, false positive rate (wrongly removed content), and appeal overturn rate.
+:::
+
+<Quiz question="A dating app sees rising harassment reports. Which metric best tracks the problem?" options={["Total sign-ups", "Harassment reports per 1,000 conversations", "DAU", "Revenue"]} answer={1} explain="A normalized prevalence rate shows whether the problem is growing relative to usage." />
+
+<UsedBy concept="trust-safety" />

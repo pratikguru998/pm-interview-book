@@ -1,0 +1,62 @@
+---
+title: North Star Metric
+sidebar_label: ⭐ North Star Metric
+slug: /concepts/north-star-metric
+emoji: ⭐
+sidebar_position: 1
+---
+
+# ⭐ North Star Metric (NSM)
+
+> **In one line:** the single metric that best captures the **value your product delivers to customers**, and that predicts long-term business success.
+
+```mermaid
+flowchart TD
+  NSM["⭐ North Star<br/>Spotify: time spent listening"] --> I1["🎵 Breadth<br/># of users listening"]
+  NSM --> I2["⏱️ Depth<br/>minutes per user"]
+  NSM --> I3["🔁 Frequency<br/>days active per week"]
+  NSM --> I4["🧭 Efficiency<br/>% of sessions starting with a rec"]
+  style NSM fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#451a03
+```
+
+## A good NSM is…
+
+<IconCards items={[
+  {icon: '💎', title: 'Value-based', text: 'Goes up when users get real value, not just when they show up.'},
+  {icon: '📈', title: 'Leading', text: 'Predicts revenue and retention later.'},
+  {icon: '🎛️', title: 'Actionable', text: 'Teams can influence it through its input metrics.'},
+  {icon: '🧮', title: 'Simple', text: 'Anyone in the company understands it.'},
+]} />
+
+## Famous examples
+
+| Company | North Star | Why it works |
+|---|---|---|
+| Airbnb | Nights booked | Value for guest AND host |
+| Uber | Completed rides per week | Captures supply, demand and reliability |
+| Slack | Messages sent in teams of 3+ people | Shows real team adoption |
+| Facebook (early) | Users reaching 7 friends in 10 days | Activation predicts retention |
+| Netflix | Hours streamed per member | Engagement drives renewals |
+| Duolingo | Daily active learners | Habit equals learning |
+
+## The NSM framework tree
+
+```mermaid
+flowchart LR
+  V["Customer value"] --> N["⭐ NSM"]
+  N --> R["💰 Revenue<br/>lagging"]
+  N --> A["Input 1"] & B["Input 2"] & C["Input 3"]
+  A --> T1["Team: Growth"]
+  B --> T2["Team: Core product"]
+  C --> T3["Team: Content"]
+```
+
+:::warning Common mistakes
+- **Revenue as the NSM.** Revenue is an *outcome*. It can go up while value goes down (for example, through price hikes).
+- **Vanity metrics** like downloads or registered users.
+- No guardrails. See [Guardrail metrics](/docs/concepts/guardrail-metrics).
+:::
+
+<Quiz question="Which is the weakest North Star for Airbnb?" options={["Nights booked", "Number of app downloads", "Nights booked with 4+ star reviews", "Repeat bookers"]} answer={1} explain="Downloads say nothing about whether guests or hosts got value." />
+
+<UsedBy concept="north-star-metric" />

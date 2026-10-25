@@ -1,0 +1,45 @@
+---
+title: OKRs & goal setting
+sidebar_label: 🎯 OKRs & goal setting
+slug: /concepts/okrs
+emoji: 🎯
+sidebar_position: 6
+---
+
+# 🎯 OKRs & goal setting
+
+> **In one line:** an **Objective** says where you want to go (qualitative and inspiring). **Key Results** measure whether you got there (quantitative).
+
+```mermaid
+flowchart TD
+  O["🎯 Objective<br/>Make onboarding delightful for new teams"] --> K1["📏 KR1: Activation 35% → 50%"]
+  O --> K2["📏 KR2: Time to first message < 3 min"]
+  O --> K3["📏 KR3: Onboarding CSAT ≥ 4.5"]
+  K1 --> I1["🛠️ Initiative: setup checklist"]
+  K2 --> I2["🛠️ Initiative: templates"]
+  K3 --> I3["🛠️ Initiative: interactive tour"]
+```
+
+## Good vs bad key results
+
+| ❌ Bad (output / task) | ✅ Good (outcome) |
+|---|---|
+| Launch the new onboarding flow | Raise 7-day activation from 35% to 50% |
+| Send 10 emails per week | Increase reactivation of dormant users by 15% |
+| Build an AI search feature | Cut "no results" searches from 12% to 5% |
+
+## The alignment cascade
+
+```mermaid
+flowchart LR
+  C["🏢 Company OKR"] --> P1["📦 Product area OKR"] --> T1["👥 Team OKR"]
+  C --> P2["📦 Product area OKR"] --> T2["👥 Team OKR"]
+```
+
+:::tip Aim high
+At Google, hitting about 70% of a stretch OKR is considered success. If you hit 100% every time, your goals are too easy.
+:::
+
+<Quiz question="Which is an outcome-based key result?" options={["Ship v2 of search", "Hire 3 engineers", "Increase search success rate from 60% to 75%", "Hold weekly meetings"]} answer={2} explain="It measures the change in user behaviour, not the work done." />
+
+<UsedBy concept="okrs" />

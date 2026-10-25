@@ -1,0 +1,54 @@
+---
+title: Issue trees & root cause
+sidebar_label: 🌳 Issue trees & 5 Whys
+slug: /concepts/root-cause-trees
+emoji: 🌳
+sidebar_position: 4
+---
+
+# 🌳 Issue trees, metric decomposition & 5 Whys
+
+> **In one line:** break a big problem into smaller, non-overlapping branches until each one can be tested with data.
+
+```mermaid
+flowchart LR
+  P["📉 Weekly orders −15%"] --> D["Demand side"]
+  P --> S["Supply side"]
+  P --> T["Tracking / data"]
+  D --> D1["Fewer visitors"]
+  D --> D2["Lower conversion"]
+  D --> D3["Lower order frequency"]
+  S --> S1["Fewer restaurants open"]
+  S --> S2["Fewer couriers → long ETAs"]
+  D2 --> D21["Search broken?"]
+  D2 --> D22["Prices up?"]
+  D2 --> D23["Payment failures?"]
+```
+
+## Metric decomposition formulas
+
+| Metric | Decomposition |
+|---|---|
+| Revenue | users × conversion × orders per buyer × average order value |
+| DAU | new + retained + resurrected − churned |
+| Ad revenue | users × sessions × ads per session × CTR × CPC |
+| Time spent | DAU × sessions per DAU × minutes per session |
+
+## 5 Whys
+
+```mermaid
+flowchart TD
+  W0["Customers complain the app is slow"] --> W1["Why? Image loading takes 4s"]
+  W1 --> W2["Why? Images are full resolution"]
+  W2 --> W3["Why? The resizing service was turned off"]
+  W3 --> W4["Why? It was removed in a cost-cutting migration"]
+  W4 --> W5["Why? No performance test in the migration checklist ✅ root cause"]
+```
+
+:::tip
+A good tree is **MECE**: each branch is separate, and together they cover every possibility. See [MECE](/docs/concepts/mece).
+:::
+
+<Quiz question="DAU = new + retained + resurrected − churned. DAU fell while new users rose. Where to look first?" options={["Acquisition channels", "Retention / churn", "Marketing budget", "Pricing page"]} answer={1} explain="If new users went up but the total went down, churn rose or retention or resurrection fell." />
+
+<UsedBy concept="root-cause-trees" />

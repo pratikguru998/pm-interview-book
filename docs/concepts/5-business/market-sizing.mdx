@@ -1,0 +1,39 @@
+---
+title: Market sizing (TAM/SAM/SOM)
+sidebar_label: 🌍 Market sizing (TAM/SAM/SOM)
+slug: /concepts/market-sizing
+emoji: 🌍
+sidebar_position: 3
+---
+
+# 🌍 Market sizing: TAM, SAM, SOM
+
+> **In one line:** how big is the opportunity? **TAM** is everyone who could use it, **SAM** is who you can serve, and **SOM** is what you can realistically win.
+
+```mermaid
+flowchart TB
+  TAM["🌍 TAM: Total addressable market<br/>All dog owners worldwide who buy food: $100B"]
+  SAM["🎯 SAM: Serviceable addressable market<br/>US online premium dog food buyers: $8B"]
+  SOM["🏆 SOM: Serviceable obtainable market<br/>Realistic 3-year share, 5% of SAM: $400M"]
+  TAM --> SAM --> SOM
+  style TAM fill:#dbeafe,stroke:#3b82f6,color:#0c1a3d
+  style SAM fill:#ede9fe,stroke:#8b5cf6,color:#1e1b4b
+  style SOM fill:#dcfce7,stroke:#10b981,color:#052e16
+```
+
+## Top-down vs bottom-up
+
+| | ⬇️ Top-down | ⬆️ Bottom-up |
+|---|---|---|
+| Start from | Total population or industry reports | Unit economics: customers × price |
+| Example | 130M US households × 38% own dogs × $500/yr | 50k pet stores × 200 customers × $40/mo |
+| Pros | Quick | More credible, ties to the business model |
+| Cons | Over-optimistic | Needs more assumptions about the business |
+
+:::tip
+Investors and interviewers trust **bottom-up** more. Do both if you have time, and check that they land within about 2–3× of each other.
+:::
+
+<Quiz question="Your startup can only sell in the US online channel. That market is your…" options={["TAM", "SAM", "SOM", "GMV"]} answer={1} explain="SAM is the part of the TAM your product and channels can actually serve." />
+
+<UsedBy concept="market-sizing" />

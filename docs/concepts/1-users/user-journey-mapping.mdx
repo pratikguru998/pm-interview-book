@@ -1,0 +1,48 @@
+---
+title: User journey mapping
+sidebar_label: 🧭 User journey mapping
+slug: /concepts/user-journey-mapping
+emoji: 🧭
+---
+
+# 🧭 User journey mapping
+
+> **In one line:** walk through every step a user takes to get their job done and mark where it hurts.
+
+```mermaid
+journey
+  title Booking a doctor's appointment
+  section Realize need
+    Feel unwell: 2: Patient
+    Decide to see doctor: 3: Patient
+  section Find & book
+    Search for doctor: 2: Patient
+    Check insurance: 1: Patient
+    Call clinic, on hold: 1: Patient
+  section Visit
+    Wait in lobby: 2: Patient
+    See doctor: 4: Patient
+  section After
+    Pick up prescription: 3: Patient
+    Pay bill, confusing: 1: Patient
+```
+
+The lowest scores (insurance check, phone booking, billing) are your **opportunity areas**.
+
+## Typical stages
+
+```mermaid
+flowchart LR
+  A["Aware"] --> B["Consider"] --> C["Try / Onboard"] --> D["Use regularly"] --> E["Expand / Pay"] --> F["Advocate or Churn"]
+```
+
+## In an interview
+In the "Report needs" step of [CIRCLES](/docs/frameworks/circles), say: "Let me walk through her journey…" and list 4–6 steps out loud. Pain points then come up *naturally*, and they're more credible than a random list.
+
+:::tip
+Look for the **moments of truth**: the first experience, the first failure, and the moment money changes hands. They shape retention more than anything else.
+:::
+
+<Quiz question="Why map the journey before listing pain points?" options={["It takes up time", "Pain points come from real steps, so they're specific and complete", "Interviewers require it", "It helps with pricing"]} answer={1} explain="A journey grounds your needs in actual user behaviour instead of guesses." />
+
+<UsedBy concept="user-journey-mapping" />

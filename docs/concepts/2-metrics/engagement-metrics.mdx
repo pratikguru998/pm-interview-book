@@ -1,0 +1,48 @@
+---
+title: Engagement metrics
+sidebar_label: 💓 Engagement (DAU/MAU, stickiness)
+slug: /concepts/engagement-metrics
+emoji: 💓
+sidebar_position: 4
+---
+
+# 💓 Engagement metrics
+
+> **In one line:** engagement measures how deeply and how often users use the product. Breadth × depth × frequency.
+
+```mermaid
+flowchart LR
+  E["💓 Engagement"] --> B["Breadth<br/>DAU, WAU, MAU"]
+  E --> D["Depth<br/>time, actions per session"]
+  E --> F["Frequency<br/>sessions per day, days per week"]
+  E --> S["Stickiness<br/>DAU ÷ MAU"]
+```
+
+## Key formulas
+
+| Metric | Formula | Benchmark |
+|---|---|---|
+| **DAU/MAU (stickiness)** | daily actives ÷ monthly actives | 20% is good; 50%+ is world-class (messaging apps) |
+| **L7 / L28** | number of days active in the last 7 or 28 days | Histogram shows power users vs casual users |
+| **Sessions per user** | sessions ÷ active users | Depends on the product |
+| **Core action rate** | % of actives doing the *key* action | Better than generic "active" |
+
+## The "power user curve" (L28 histogram)
+
+```mermaid
+xychart-beta
+  title "Users by days active in last 28 (smile = healthy)"
+  x-axis "Days active" [1, 4, 8, 12, 16, 20, 24, 28]
+  y-axis "% of users" 0 --> 30
+  bar [24, 12, 8, 6, 6, 8, 12, 24]
+```
+
+A "smile" shape means a strong cohort of daily power users. A curve that only slopes down from left to right means most people are casual.
+
+:::warning Define "active" carefully
+"Opened the app" is weak. Better: **performed a meaningful action**, such as sent a message, completed a lesson, or watched for 30 seconds or more. Otherwise push notifications can inflate DAU.
+:::
+
+<Quiz question="DAU 2M, MAU 10M. Stickiness is…" options={["5%", "20%", "50%", "500%"]} answer={1} explain="2M ÷ 10M = 20%. The average user is active about 6 days a month." />
+
+<UsedBy concept="engagement-metrics" />

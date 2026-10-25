@@ -1,0 +1,54 @@
+---
+title: Roadmaps
+sidebar_label: 🛣️ Roadmapping
+slug: /concepts/roadmapping
+emoji: 🛣️
+sidebar_position: 2
+---
+
+# 🛣️ Roadmaps
+
+> **In one line:** a roadmap communicates **direction and priorities over time**. It's a strategic story, not a promise of delivery dates.
+
+## Now / Next / Later (outcome-based)
+
+```mermaid
+flowchart LR
+  subgraph Now["🟢 NOW (this quarter)"]
+    n1["Cut onboarding drop-off<br/>checklist + templates"]
+  end
+  subgraph Next["🟡 NEXT (1–2 quarters)"]
+    x1["Grow team adoption<br/>invites, roles"]
+  end
+  subgraph Later["🔵 LATER (exploring)"]
+    l1["Enterprise readiness<br/>SSO, audit logs"]
+  end
+  Now --> Next --> Later
+```
+
+Confidence drops the further right you go. That's expected and honest.
+
+## Feature roadmap vs outcome roadmap
+
+| ❌ Feature-based | ✅ Outcome-based |
+|---|---|
+| Q1: Build dark mode | Q1: Increase evening session length |
+| Q2: Ship chat | Q2: Reduce time to resolve buyer questions |
+| Fixed dates for everything | Themes + problems + success metrics |
+
+## Inputs to a roadmap
+
+```mermaid
+mindmap
+  root((Roadmap))
+    Strategy & OKRs
+    Customer research
+    Data & metrics
+    Sales / support feedback
+    Tech debt & platform needs
+    Competitive moves
+```
+
+<Quiz question="Why prefer an outcome-based roadmap?" options={["It looks nicer", "It keeps teams focused on solving problems and leaves room to change solutions", "It has more dates", "Executives require it"]} answer={1} explain="Outcomes stay stable while the solutions can evolve as you learn." />
+
+<UsedBy concept="roadmapping" />

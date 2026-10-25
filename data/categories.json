@@ -1,0 +1,12 @@
+[
+  {"slug": "product-design", "label": "Product Design", "emoji": "🎨", "color": "#8b5cf6", "description": "Design a new product for a user group or problem. Tests empathy, creativity and structured thinking.", "framework": "circles"},
+  {"slug": "product-improvement", "label": "Product Improvement", "emoji": "🛠️", "color": "#ec4899", "description": "Improve an existing product. Tests product sense, user segmentation and prioritization.", "framework": "product-improvement"},
+  {"slug": "product-strategy", "label": "Product Strategy", "emoji": "♟️", "color": "#f59e0b", "description": "Market entry, competition, build/buy/partner, long-term bets.", "framework": "strategy"},
+  {"slug": "metrics", "label": "Metrics & Analytics", "emoji": "📊", "color": "#10b981", "description": "Define success, pick a North Star, design dashboards and experiments.", "framework": "metrics"},
+  {"slug": "execution", "label": "Root Cause & Execution", "emoji": "🔍", "color": "#ef4444", "description": "A metric dropped — why? Trade-offs, launch decisions, prioritization under constraints.", "framework": "root-cause"},
+  {"slug": "estimation", "label": "Estimation", "emoji": "🧮", "color": "#0ea5e9", "description": "Guesstimates and market sizing. Tests structured decomposition and sanity checking.", "framework": "estimation"},
+  {"slug": "behavioral", "label": "Behavioral & Leadership", "emoji": "🤝", "color": "#6366f1", "description": "Conflict, failure, influence without authority, ownership. Tests self-awareness and leadership.", "framework": "star"},
+  {"slug": "technical", "label": "Technical", "emoji": "⚙️", "color": "#64748b", "description": "How things work, system design for PMs, APIs, trade-offs with engineering.", "framework": "technical"},
+  {"slug": "pricing", "label": "Pricing & Monetization", "emoji": "💰", "color": "#eab308", "description": "Price a product, design a business model, grow revenue.", "framework": "pricing"},
+  {"slug": "ai-product", "label": "AI / ML Product", "emoji": "🤖", "color": "#14b8a6", "description": "Build and evaluate AI-powered products: LLMs, recommendations, trust and safety.", "framework": "ai-product"}
+]

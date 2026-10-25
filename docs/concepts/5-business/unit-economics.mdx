@@ -1,0 +1,74 @@
+---
+title: Unit economics (CAC, LTV)
+sidebar_label: 🧾 Unit economics (CAC, LTV)
+slug: /concepts/unit-economics
+emoji: 🧾
+sidebar_position: 1
+---
+
+# 🧾 Unit economics: CAC, LTV, payback, margins
+
+> **In one line:** do you make more from a customer than it costs to get and serve them?
+
+```mermaid
+flowchart LR
+  CAC["💸 CAC<br/>cost to acquire one customer"] --> C{"LTV : CAC"}
+  LTV["💰 LTV<br/>gross profit over customer lifetime"] --> C
+  C -->|"< 1"| X["🔥 Losing money on each customer"]
+  C -->|"~3"| G["✅ Healthy"]
+  C -->|"> 5"| U["🚀 Under-investing in growth?"]
+```
+
+## Formulas
+
+| Metric | Formula |
+|---|---|
+| **CAC** | sales & marketing spend ÷ new customers |
+| **ARPU** | revenue ÷ active users (per month) |
+| **Gross margin** | (revenue − cost of goods sold) ÷ revenue |
+| **Churn (monthly)** | customers lost ÷ customers at the start of the month |
+| **LTV** | ARPU × gross margin ÷ monthly churn |
+| **Payback period** | CAC ÷ (ARPU × gross margin) months |
+
+## Try it
+
+<EstimationCalc
+  inputs={[
+    {key: 'arpu', label: 'ARPU per month', value: 20, unit: '$'},
+    {key: 'gm', label: 'Gross margin', value: 0.8},
+    {key: 'churn', label: 'Monthly churn', value: 0.04},
+    {key: 'cac', label: 'CAC', value: 150, unit: '$'},
+  ]}
+  steps={[
+    {key: 'life', label: 'Average lifetime (months)', expr: '1 / churn'},
+    {key: 'ltv', label: 'LTV', expr: 'arpu * gm * life'},
+    {key: 'pay', label: 'Payback (months)', expr: 'cac / (arpu * gm)'},
+    {key: 'ratio', label: '⚖️ LTV : CAC', expr: 'ltv / cac'},
+  ]}
+/>
+
+## Levers to improve unit economics
+
+```mermaid
+mindmap
+  root((Better unit economics))
+    Lower CAC
+      Referrals
+      SEO / content
+      Better conversion
+    Higher ARPU
+      Upsell tiers
+      Price increase
+      Add-ons
+    Higher margin
+      Lower infrastructure cost
+      Automation
+    Lower churn
+      Onboarding
+      Annual plans
+      Engagement
+```
+
+<Quiz question="ARPU $10/mo, 100% margin, 5% monthly churn. LTV?" options={["$50", "$100", "$200", "$500"]} answer={2} explain="Lifetime = 1 ÷ 0.05 = 20 months, and 20 × $10 = $200." />
+
+<UsedBy concept="unit-economics" />

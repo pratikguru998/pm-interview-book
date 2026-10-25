@@ -1,0 +1,51 @@
+---
+title: Product-market fit
+sidebar_label: 🎯 Product-market fit
+slug: /concepts/product-market-fit
+emoji: 🎯
+sidebar_position: 1
+---
+
+# 🎯 Product-market fit (PMF)
+
+> **In one line:** you have PMF when a specific market **pulls** the product out of your hands. Users stay, pay and tell others without being pushed.
+
+```mermaid
+flowchart LR
+  subgraph Before["Before PMF 🧗"]
+    a1["Push marketing"] --> a2["Users try"] --> a3["Users leave"]
+  end
+  subgraph After["After PMF 🚀"]
+    b1["Word of mouth"] --> b2["Users stay"] --> b3["Users pay + refer"] --> b1
+  end
+  Before -->|"iterate: segment, value prop, product"| After
+```
+
+## How to measure PMF
+
+<IconCards items={[
+  {icon: '📉', title: 'Flattening retention', text: 'Cohort curves level off instead of dropping to zero.'},
+  {icon: '😢', title: 'The 40% test (Sean Ellis)', text: '40% or more of users say they’d be “very disappointed” if the product disappeared.'},
+  {icon: '📣', title: 'Organic growth', text: 'A large share of new users come from word of mouth.'},
+  {icon: '💳', title: 'Willingness to pay', text: 'Users pay without heavy discounts and renew.'},
+]} />
+
+## The PMF pyramid (Dan Olsen)
+
+```mermaid
+flowchart BT
+  A["🎯 Target customer"] --> B["😣 Underserved needs"]
+  B --> C["💎 Value proposition"]
+  C --> D["🧩 Feature set (MVP)"]
+  D --> E["🎨 UX"]
+```
+
+The bottom two layers are the **problem space** (the market). The top three are the **solution space** (the product). Fit happens when the solution matches the problem.
+
+:::tip In strategy questions
+"Before scaling, I'd confirm PMF in one segment: flattening retention plus organic referrals. Scaling acquisition without it just pours water into a leaky bucket."
+:::
+
+<Quiz question="Which is the strongest PMF signal?" options={["1M downloads after a TV ad", "Retention curve flattening at 35% with 60% organic sign-ups", "Positive press coverage", "A big funding round"]} answer={1} explain="Stable retention and organic pull show real, lasting value." />
+
+<UsedBy concept="product-market-fit" />

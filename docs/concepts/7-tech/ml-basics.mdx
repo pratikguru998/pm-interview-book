@@ -1,0 +1,57 @@
+---
+title: ML basics for PMs
+sidebar_label: 🧠 ML basics (precision/recall)
+slug: /concepts/ml-basics
+emoji: 🧠
+sidebar_position: 3
+---
+
+# 🧠 Machine learning basics for PMs
+
+> **In one line:** ML learns patterns from examples (data) instead of hand-written rules. Your job is to define the problem, the data, the quality bar, and the user experience when it's wrong.
+
+```mermaid
+flowchart LR
+  D["📦 Labelled data<br/>emails tagged spam / not spam"] --> T["🏋️ Train model"]
+  T --> M["🧠 Model"]
+  M --> E["🧪 Evaluate on held-out data"]
+  E --> P["🚀 Deploy"]
+  P --> F["🔁 Collect feedback<br/>'Not spam' clicks"]
+  F --> D
+```
+
+## Precision vs recall: the most important trade-off
+
+```mermaid
+flowchart TB
+  subgraph CM["Confusion matrix for spam filtering"]
+    TP["✅ True positive<br/>spam caught"]
+    FP["❌ False positive<br/>real email sent to spam"]
+    FN["❌ False negative<br/>spam reached inbox"]
+    TN["✅ True negative<br/>real email in inbox"]
+  end
+```
+
+| Metric | Formula | Question it answers |
+|---|---|---|
+| **Precision** | TP ÷ (TP + FP) | Of what we flagged, how much was right? |
+| **Recall** | TP ÷ (TP + FN) | Of all the real cases, how many did we catch? |
+| **F1** | harmonic mean of the two | Balance of both |
+
+**Raising the threshold** makes the model more cautious: precision goes up, recall goes down. Pick based on **which mistake costs more**:
+- Spam filter: false positives (missing an important email) are worse, so favour precision.
+- Cancer screening: false negatives (missed cancer) are worse, so favour recall.
+
+## Types of ML
+
+| Type | What it does | Example |
+|---|---|---|
+| Classification | Assign a category | Fraud or not |
+| Regression | Predict a number | Delivery ETA |
+| Ranking / recommendation | Order items | Feed, search results |
+| Clustering | Find groups | User segments |
+| Generative | Create content | LLMs, image generation |
+
+<Quiz question="A fraud model blocks many legitimate payments. Which metric is too low?" options={["Recall", "Precision", "Latency", "Coverage"]} answer={1} explain="Many false positives means low precision." />
+
+<UsedBy concept="ml-basics" />
